@@ -1,0 +1,113 @@
+section.dashboardComponent#hero {
+    /* position */
+    position: relative;
+
+    background-color: red;
+    grid-row: 1 / 3;
+    grid-column: 1 / -2;
+}
+
+section.dashboardComponent#hero .container {
+    /* sizing */
+    width: 100%;
+    height: 100%;
+    padding: clamp(var(--default-padding), 5vw, calc(var(--default-padding) * 3)) clamp(calc(var(--default-padding) * 2), 10vw, calc(var(--default-padding) * 6));
+
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(var(--default-padding), 5vw, calc(var(--default-padding) * 3));
+}
+
+section.dashboardComponent#hero .container img.profilePicture {
+    /* sizing */
+    height: 75%;
+    aspect-ratio: 1/1;
+
+    /* styling */
+    border-radius: 50%;
+}
+
+section.dashboardComponent#hero .container .about {
+    /* sizing */
+    height: 100%;
+    width: 100%;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--default-padding);
+}
+
+section.dashboardComponent#hero .container .about h1 {
+    /* spacing */
+    margin: 0;
+
+    /* text */
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+section.dashboardComponent#hero .container .about p {
+    /* spacing */
+    margin: 0;
+
+    /* text */
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+section.dashboardComponent#hero .container .about .weather {
+    /* sizing */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--default-padding);
+
+    /* list */
+    list-style: none;
+}
+
+section.dashboardComponent#hero .container .about .weather li {
+    /* sizing */
+    padding: var(--default-padding);
+    height: 100%;
+    aspect-ratio: 0.75/1;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--default-padding);
+
+    /* styling */
+    backdrop-filter: brightness(75%) blur(15px);
+    color: var(--dnu-light-color-100);
+    border-radius: calc(var(--border-radius) / 2);
+}
+
+section.dashboardComponent#hero .container .about .weather li .material-symbols-outlined {
+    /* sizing */
+    font-size: 65px;
+}
+
+section.dashboardComponent#hero .container .about .weather li .title {
+    /* text */
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+}

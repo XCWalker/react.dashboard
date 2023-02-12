@@ -1,0 +1,263 @@
+/**** unAuth ****/
+#root>main>section.account.unAuth {
+    /* sizing */
+    height: 100vh;
+}
+
+#root>main>section.account.unAuth .container {
+    /* sizing */
+    width: 100%;
+    height: 100%;
+    padding: var(--header-padding);
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*** Form ***/
+#root>main>section.account.unAuth .container form {
+    /* variables */
+    --input-height: 35px;
+
+    /* sizing */
+    width: min(500px, 100%);
+    padding: clamp(10px, 5vw, 30px);
+    max-height: 100%;
+    overflow: auto;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    /* styling */
+    border-radius: var(--border-radius);
+    backdrop-filter: brightness(75%) blur(15px);
+}
+
+/** Form - Header **/
+#root>main>section.account.unAuth .container form header {
+    /* sizing */
+    height: 70px;
+
+    /* flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#root>main>section.account.unAuth .container form header h1 {}
+
+/** Form - Error **/
+#root>main>section.account.unAuth .container form span.error {
+    /* sizing */
+    width: 100%;
+    height: 70px;
+
+    /* flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* text */
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+
+    /* styling */
+    border: 2px solid var(--form-color-invalid);
+    border-radius: calc(var(--border-radius) / 2);
+    color: var(--dnu-light-color-100);
+    background-color: var(--form-color-invalid-opac);
+    backdrop-filter: brightness(75%) blur(15px);
+}
+
+/** Form - Main **/
+#root>main>section.account.unAuth .container form main {
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    gap: var(--default-padding);
+}
+
+#root>main>section.account.unAuth .container form main .input {
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--default-padding) / 2);
+}
+
+#root>main>section.account.unAuth .container form main .input label {
+    /* text */
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    user-select: none;
+}
+
+#root>main>section.account.unAuth .container form main .input input {
+    /* sizing */
+    height: var(--input-height);
+    padding: 10px;
+
+    /* text */
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+
+    /* styling */
+    border: 2px solid var(--dnu-light-color-100);
+    border-radius: calc(var(--border-radius) / 2);
+    background-color: transparent;
+    backdrop-filter: brightness(75%) blur(15px);
+    color: var(--dnu-light-color-100);
+    outline: none;
+}
+
+#root>main>section.account.unAuth .container form main .input input:focus {
+    /* styling */
+    border-color: var(--selector-color);
+}
+
+#root>main>section.account.unAuth .container form main .input input:valid:focus {
+    /* styling */
+    border-color: var(--form-color-valid-hold);
+}
+
+#root>main>section.account.unAuth .container form main .input input:valid {
+    /* styling */
+    border-color: var(--form-color-valid);
+}
+
+#root>main>section.account.unAuth .container form main .input input:invalid:focus {
+    /* styling */
+    border-color: var(--form-color-invalid-hold);
+}
+
+#root>main>section.account.unAuth .container form main .input input:invalid {
+    /* styling */
+    border-color: var(--form-color-invalid);
+}
+
+#root>main>section.account.unAuth .container form main .line {
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--default-padding);
+}
+
+#root>main>section.account.unAuth .container form main .line .group {
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: calc(var(--default-padding) / 2);
+}
+
+#root>main>section.account.unAuth .container form main .line .group input[type="checkbox"] {
+    display: none;
+}
+
+#root>main>section.account.unAuth .container form main .line .group input[type="checkbox"]~.checkbox {
+    /* position */
+    position: relative;
+
+    /* sizing */
+    --size: 14px;
+    height: var(--size);
+    width: var(--size);
+
+    /* styling */
+    background-color: transparent;
+    backdrop-filter: brightness(75%) blur(15px);
+    border-radius: 4px;
+}
+
+#root>main>section.account.unAuth .container form main .line .group input[type="checkbox"]:checked~.checkbox {
+    /* styling */
+    background-color: var(--theme-color-100);
+    backdrop-filter: brightness(100%) blur(0px);
+}
+#root>main>section.account.unAuth .container form main .line .group input[type="checkbox"]:checked~.checkbox::after {
+    /* content */
+    content: "";
+
+    /* position */
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    translate: -50% -50%;
+
+    /* sizing */
+    width: 10px;
+    height: 5px;
+
+    rotate: -50deg;
+    border: 2px solid var(--dnu-light-color-100);
+    border-top: none;
+    border-right: none;
+}
+
+#root>main>section.account.unAuth .container form main .line .group label {
+    /* text */
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    user-select: none;
+}
+
+#root>main>section.account.unAuth .container form main .line a {
+    /* text */
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: underline dashed;
+    user-select: none;
+
+    /* styling */
+    color: inherit;
+}
+
+#root>main>section.account.unAuth .container form main .line a:hover,
+#root>main>section.account.unAuth .container form main .line a:focus-visible {
+    /* text */
+    text-decoration: underline solid;
+}
+
+#root>main>section.account.unAuth .container form main .line a:active {}
+
+#root>main>section.account.unAuth .container form main button {
+    /* sizing */
+    height: var(--input-height);
+
+    /* text */
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+
+    /* styling */
+    border: 2px solid var(--theme-color-100);
+    border-radius: calc(var(--border-radius) / 2);
+    background-color: var(--theme-color-100);
+    color: var(--dnu-dark-color-100);
+}
+
+#root>main>section.account.unAuth .container form main button:hover,
+#root>main>section.account.unAuth .container form main button:focus-visible {
+    background-color: transparent;
+    backdrop-filter: brightness(75%) blur(15px);
+    color: var(--dnu-light-color-100);
+}
+
+#root>main>section.account.unAuth .container form main button:active {
+    background-color: transparent;
+    backdrop-filter: brightness(75%) blur(15px);
+    color: var(--dnu-light-color-100);
+    border-color: currentColor;
+}

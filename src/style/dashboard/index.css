@@ -1,0 +1,15 @@
+section.dashboard#index {
+    /* sizing */
+    padding: var(--header-style-padding);
+}
+
+section.dashboard#index>.container {
+    /* sizing */
+    min-height: 100vh;
+    
+    /* grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(325px, 100%), 1fr));
+    grid-template-rows: repeat(auto-fill, 150px);
+    gap: calc(var(--default-padding) * 3);
+}

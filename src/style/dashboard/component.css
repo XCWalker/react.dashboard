@@ -1,0 +1,4 @@
+section.dashboardComponent {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
